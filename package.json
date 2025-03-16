@@ -2,7 +2,8 @@
   "name": "wedding",
   "private": true,
   "version": "1.0.0",
-  "homepage": ".",
+ "homepage": "https://what-a-tops.github.io/wedding",
+  "description": "A wedding website",
   "type": "module",
   "scripts": {
     "dev": "vite",
