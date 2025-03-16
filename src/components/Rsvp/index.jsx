@@ -11,7 +11,7 @@ function index() {
       className="relative w-full flex flex-col justify-center items-center text-justify p-10 gap-4 min-h-[100vh] shadow-md"
     >
       <div className="text-dark text-center p-4">
-        <h1 className="text-3xl font-extrabold text-emerald-600 uppercase">
+        <h1 className="text-3xl font-extrabold text-emerald-500 uppercase">
           RSVP
         </h1>
       </div>
