@@ -21,7 +21,7 @@ const form = () => {
 
   return (
     <div className="bg-white p-6 max-w-md mx-auto my-8">
-      <p className="text-green-700 text-center italic mb-6">
+      <p className="text-lime-900 text-center italic mb-6">
         We can't wait to celebrate with you!
       </p>
 
@@ -64,7 +64,7 @@ const form = () => {
 
         <Button
           type="submit"
-          className="w-full bg-emerald-700 text-white py-2 rounded-lg hover:bg-emerald-600 transition"
+          className="w-full bg-lime-700 text-white py-2 rounded-lg hover:bg-lime-900 transition"
         >
           Confirm Attendance
         </Button>

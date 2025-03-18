@@ -8,7 +8,7 @@ const Index = ({ imagePath }) => {
         alt="Panel Image"
         className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-emerald-500/40"></div>
+      <div className="absolute inset-0 bg-lime-500/15"></div>
     </div>
   );
 };

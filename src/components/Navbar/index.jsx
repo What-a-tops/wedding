@@ -4,11 +4,13 @@ import {
   HomeIcon,
   MapPinIcon,
   TicketIcon,
+  UsersIcon,
 } from "@heroicons/react/16/solid";
 
 const navLinks = [
   { id: "home", label: "HOME", icon: HomeIcon },
   { id: "story", label: "OUR STORY", icon: BookOpenIcon },
+  { id: "entourage", label: "ENTOURAGE", icon: UsersIcon },
   { id: "location", label: "LOCATION", icon: MapPinIcon },
   { id: "rsvp", label: "RSVP", icon: TicketIcon },
 ];
@@ -19,8 +21,8 @@ const Index = () => {
   const linkClasses = (id) =>
     `flex items-center gap-1 text-xs p-3 rounded-md transition-all duration-300 font-bold ${
       active === id
-        ? "text-emerald-700 bg-[#e0f2f1]"
-        : "text-emerald-500 hover:bg-[#e0f2f1]"
+        ? "text-lime-900 bg-[#e0f2f1]"
+        : "text-lime-700 hover:bg-[#e0f2f1]"
     }`;
 
   return (
@@ -36,7 +38,7 @@ const Index = () => {
             href={`#${id}`}
             className={linkClasses(id)}
             onClick={(e) => {
-              e.preventDefault(); // Prevent page reload
+              e.preventDefault();
               document
                 .getElementById(id)
                 ?.scrollIntoView({ behavior: "smooth" });

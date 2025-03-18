@@ -8,7 +8,7 @@ const VideoPlayer = () => {
   return (
     <section
       id="home"
-      className="relative w-full max-w-4xl mx-auto h-[100vh] flex items-center justify-center bg-[#f0fdfa] shadow-md"
+      className="relative w-full max-w-4xl mx-auto h-[100vh] flex items-center justify-center bg-lime-500/10 shadow-md"
     >
       <div className="w-full flex flex-col items-center justify-center h-full">
         <div className="w-full relative rounded-md overflow-hidden shadow-lg">

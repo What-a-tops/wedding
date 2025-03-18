@@ -1,45 +1,40 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .scroll-container::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 
 .scroll-container::-webkit-scrollbar-thumb {
-    background-color: #A7F3D0;
-    /* Light green when not hovered */
-    border-radius: 10px;
-    border: 2px solid #A7F3D0;
-    /* Light green border */
-    transition: background-color 0.3s ease;
-    /* Smooth transition */
+  background-color: oklch(0.405 0.101 131.063);
+  /* Light lime (default) */
+  border-radius: 10px;
+  border: 2px solid transparent;
+  /* Transparent border for a clean look */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .scroll-container::-webkit-scrollbar-thumb:hover {
-    background-color: #16C47F;
-    /* Original Mint green on hover */
-    border: 2px solid #16C47F;
+  background-color: oklch(0.605 0.201 131.063);
+  /* Strong lime on hover */
+  border-color: oklch(0.605 0.201 131.063);
 }
 
 .scroll-container::-webkit-scrollbar-track {
-    background-color: #f0fdfa;
-    border-radius: 10px;
+  background-color: #f0fdfa;
+  /* Soft mint background */
+  border-radius: 10px;
 }
 
 /* Firefox Support */
 .scroll-container {
-    scrollbar-color: #A7F3D0 #f0fdfa;
-    /* Light green by default */
-    scrollbar-width: thin;
-}
-
-.scroll-container:hover {
-    scrollbar-color: #16C47F #f0fdfa;
-    /* Mint green on hover */
+  scrollbar-color: oklch(0.605 0.201 131.063) #f0fdfa;
+  /* Strong lime on hover */
+  scrollbar-width: thin;
 }
