@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import Intro from "../../assets/intro.mp4";
 import { Maximize, Minimize } from "lucide-react"; // Optional icons for better UX
+import ParticlesBackground from "../Particle";
 
 const VideoPlayer = () => {
   const videoRef = useRef(null);
@@ -10,6 +11,8 @@ const VideoPlayer = () => {
       id="home"
       className="relative w-full max-w-4xl mx-auto h-[100vh] flex items-center justify-center bg-lime-500/10 shadow-md"
     >
+      <ParticlesBackground />
+
       <div className="w-full flex flex-col items-center justify-center h-full">
         <div className="w-full relative rounded-md overflow-hidden shadow-lg">
           <video

@@ -4,6 +4,7 @@ function index() {
   return (
     <section
       id="story"
+      data-section="story"
       className="relative w-full flex flex-col justify-center items-center text-justify p-10 gap-4 h-[100vh] shadow-md"
     >
       <div className="flex flex-col justify-center items-center p-8 rounded-2xl w-full text-center gap-6 border-4 border-lime-600 border-opacity-20">

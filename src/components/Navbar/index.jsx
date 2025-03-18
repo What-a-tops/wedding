@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   BookOpenIcon,
   HomeIcon,
@@ -17,6 +17,47 @@ const navLinks = [
 
 const Index = () => {
   const [active, setActive] = useState("home");
+  const [manualClick, setManualClick] = useState(false);
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("[data-section]");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!manualClick) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActive(entry.target.id);
+            }
+          });
+        }
+      },
+      { threshold: 0.3, rootMargin: "-150px 0px 0px 0px" }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    const handleScroll = () => {
+      const atTop = window.scrollY < 50; // Improved threshold for detecting top
+      if (atTop && !manualClick) {
+        setActive("home");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [manualClick]);
+
+  const handleLinkClick = (id) => {
+    setManualClick(true);
+    setActive(id);
+
+    setTimeout(() => setManualClick(false), 1500);
+  };
 
   const linkClasses = (id) =>
     `flex items-center gap-1 text-xs p-3 rounded-md transition-all duration-300 font-bold ${
@@ -39,10 +80,10 @@ const Index = () => {
             className={linkClasses(id)}
             onClick={(e) => {
               e.preventDefault();
+              handleLinkClick(id);
               document
                 .getElementById(id)
                 ?.scrollIntoView({ behavior: "smooth" });
-              setActive(id);
             }}
           >
             <Icon className="w-4 h-4" />

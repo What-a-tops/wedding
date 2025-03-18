@@ -8,6 +8,7 @@ const index = () => {
   return (
     <section
       id="location"
+      data-section="location"
       className="relative w-full flex items-center justify-center text-justify p-10 gap-4 h-[100vh] shadow-md bg-lime-500/10"
     >
       <div className="relative w-full max-w-4xl">

@@ -8,6 +8,7 @@ function index() {
   return (
     <section
       id="rsvp"
+      data-section="rsvp"
       className="relative w-full flex flex-col justify-center items-center text-justify p-10 gap-4 min-h-[100vh] shadow-md"
     >
       <div className="text-dark text-center p-4">
