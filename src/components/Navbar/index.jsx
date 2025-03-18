@@ -21,8 +21,8 @@ const Index = () => {
   const linkClasses = (id) =>
     `flex items-center gap-1 text-xs p-3 rounded-md transition-all duration-300 font-bold ${
       active === id
-        ? "text-lime-900 bg-[#e0f2f1]"
-        : "text-lime-700 hover:bg-[#e0f2f1]"
+        ? "text-lime-900 bg-lime-500/20 shadow-md"
+        : "text-lime-700 hover:bg-lime-500/20 hover:shadow-md"
     }`;
 
   return (
