@@ -7,8 +7,17 @@ body {
   padding: 0;
 }
 
+.scroll-container {
+  height: 100vh;
+  /* Full viewport height */
+  overflow-y: auto;
+  /* Enables vertical scrolling */
+  scroll-behavior: smooth;
+  /* Ensures smooth scrolling */
+}
+
 .scroll-container::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 .scroll-container::-webkit-scrollbar-thumb {

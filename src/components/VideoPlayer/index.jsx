@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import Intro from "../../assets/intro.mp4";
+import Intro from "../../assets/img/intro.mp4";
 import { Maximize, Minimize } from "lucide-react"; // Optional icons for better UX
 import ParticlesBackground from "../Particle";
 

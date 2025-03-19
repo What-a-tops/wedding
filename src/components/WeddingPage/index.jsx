@@ -4,6 +4,7 @@ import VideoPlayer from "../VideoPlayer/index.jsx";
 import Story from "../Story/index.jsx";
 import Location from "../Location/index.jsx";
 import RSVP from "../Rsvp/index.jsx";
+import ScrollToTop from "../ScrollToTop/index.jsx";
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       <Story />
       <Location />
       <RSVP />
+      <ScrollToTop />
     </div>
   );
 };

@@ -21,9 +21,9 @@ const form = () => {
 
   return (
     <div className="bg-white p-6 max-w-md mx-auto my-8">
-      <p className="text-lime-900 text-center italic mb-6">
-        We can't wait to celebrate with you!
-      </p>
+      <h5 className="text-lg font-bold text-lime-700/80 tracking-wider text-center mb-4 uppercase">
+        Attendance Form
+      </h5>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <Input
@@ -69,6 +69,9 @@ const form = () => {
           Confirm Attendance
         </Button>
       </form>
+      <p className="text-lime-700/80 text-sm text-center italic mt-6">
+        We can't wait to celebrate with you!
+      </p>
     </div>
   );
 };
