@@ -1,13 +1,17 @@
 import React from "react";
 
-const index = ({ title, className = "" }) => {
+const Title = ({ title, className = "" }) => {
+  const [firstLine, secondLine] = title.split("\n");
+
   return (
-    <div className={`text-dark text-center p-4 ${className}`}>
-      <h1 className="text-3xl font-extrabold text-lime-700/80 uppercase">
-        {title}
-      </h1>
-    </div>
+    <h1
+      className={`text-4xl tracking-wide text-lime-900/80 text-center flex flex-col drop-shadow-md ${className}`}
+      style={{ fontFamily: "Coneria" }}
+    >
+      <span>{firstLine}</span>
+      <span className="block text-3xl mt-1">{secondLine}</span>
+    </h1>
   );
 };
 
-export default index;
+export default Title;

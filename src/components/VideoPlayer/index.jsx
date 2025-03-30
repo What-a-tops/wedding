@@ -1,23 +1,20 @@
 import { useRef } from "react";
+import Section from "../Section";
 import Intro from "../../assets/img/intro.mp4";
-import { Maximize, Minimize } from "lucide-react"; // Optional icons for better UX
+import { Maximize, Minimize } from "lucide-react";
 import ParticlesBackground from "../Particle";
 
 const VideoPlayer = () => {
   const videoRef = useRef(null);
 
   return (
-    <section
-      id="home"
-      className="relative w-full max-w-4xl mx-auto h-[100vh] flex items-center justify-center bg-lime-500/10 shadow-md"
-    >
+    <Section id="home" color="bg-lime-500/5">
       <ParticlesBackground />
-
-      <div className="w-full flex flex-col items-center justify-center h-full">
-        <div className="w-full relative rounded-md overflow-hidden shadow-lg">
+      <div className="w-full flex flex-col items-center justify-center flex-1">
+        <div className="w-full relative overflow-hidden border-0">
           <video
             ref={videoRef}
-            className="w-full aspect-video transition-transform duration-300 outline-none border-0"
+            className="w-full h-auto max-h-full object-cover transition-transform duration-300 outline-none border-0"
             autoPlay
             loop
             muted
@@ -29,7 +26,7 @@ const VideoPlayer = () => {
           </video>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

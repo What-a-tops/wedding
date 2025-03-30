@@ -5,13 +5,20 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Attire from "../../assets/img/attire.png";
 import Color from "../../assets/img/color.png";
 import Title from "../Title";
+import Bouquet from "../../assets/img/bouquet.jpg";
+import QrCode from "../QRCode/image";
+
+import GCash1 from "../../assets/qrcode/gcash1.png";
+import BPI from "../../assets/qrcode/bpi.png";
+import GCash from "../../assets/qrcode/gcash.png";
+import Card from "../Card";
 
 const staggerContainer = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.3, // Smooth stagger effect
+      staggerChildren: 0.3,
     },
   },
 };
@@ -36,62 +43,81 @@ function index() {
     <motion.section
       id="rsvp"
       data-section="rsvp"
-      className="relative w-full flex flex-col justify-center items-center text-justify p-10 gap-4 min-h-[100vh] shadow-md"
+      className="relative w-full flex flex-col justify-center items-center text-justify p-6 md:p-10 gap-6 min-h-[100vh] bg-lime-500/5 shadow-md bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${Bouquet})` }}
       variants={staggerContainer}
-      initial="hidden"
-      whileInView="show"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: false, amount: 0.3 }}
     >
       <motion.div variants={fadeInUp}>
         <Title title="RSVP" />
       </motion.div>
 
-      <div className="grid grid-cols-2 gap-2 items-center w-full max-w-4xl h-full overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full max-w-4xl">
         <motion.div
-          className="col-span-1 overflow-hidden flex flex-col h-full flex-1 border-2 rounded-lg border-lime-600/50"
+          className="overflow-hidden flex flex-col rounded-2xl bg-white/80 backdrop-blur-sm h-full shadow"
           variants={slideInLeft}
         >
           <Form />
         </motion.div>
 
         <motion.div
-          className="col-span-1 h-full flex flex-col gap-2 flex-1"
+          className="flex flex-col gap-2 h-full"
           variants={slideInRight}
         >
-          <div className="flex-1 flex flex-col items-center border-2 border-lime-600/50 p-6 rounded-lg shadow-md w-full h-full">
-            <h2 className="text-lg font-bold text-lime-700/80 tracking-wider mb-2">
+          <Card>
+            <h2 className="text-sm sm:text-md md:text-lg lg:text-xl font-bold text-lime-700/80 tracking-wider mb-2">
               ATTIRE: <span className="text-lime-900/80">SMART CASUAL</span>
             </h2>
 
-            <div className="flex flex-col items-center text-center p-6 gap-4 flex-grow">
+            <div className="flex flex-col items-center text-center p-2 gap-4 w-full">
               <img
                 src={Attire}
                 alt="Attire"
-                className="w-80 h-auto max-h-32 object-contain rounded-lg"
+                className="w-full max-w-[20rem] max-h-32 object-contain rounded-lg"
               />
               <p className="text-sm text-lime-700/80 italic">
                 We kindly request that you dress in smart casual attire for the
                 ceremony and reception.
               </p>
             </div>
-          </div>
+          </Card>
 
-          <div className="flex-1 flex flex-col items-center border-2 border-lime-600/50 p-6 rounded-lg shadow-md w-full h-full">
-            <h5 className="text-lg font-bold text-lime-700/80 tracking-wider mb-2">
+          <Card>
+            <h5 className="text-base sm:text-lg md:text-xl lg:text-xl font-bold text-lime-700/80 tracking-wider mb-2">
               RECOMMENDED COLORS:
             </h5>
 
-            <div className="flex flex-col items-center text-center p-6 text-gray-400 gap-4 flex-grow">
+            <div className="flex flex-col items-center text-center p-2 gap-4 w-full">
               <img
                 src={Color}
                 alt="color coding"
-                className="w-64 h-auto max-h-24 object-contain rounded-lg"
+                className="w-full max-h-12 object-contain rounded-lg"
               />
               <p className="text-sm text-lime-700/80 italic">
                 We would love to see you in these colors.
               </p>
             </div>
-          </div>
+          </Card>
+
+          <Card>
+            <h5 className="text-lg md:text-xl font-bold text-lime-700/80 tracking-wide uppercase text-center">
+              A Note on Gifts
+            </h5>
+
+            <p className="text-xs xs:text-base text-lime-700/80 italic text-center mt-2 px-4">
+              our presence is our greatest gift. If you'd like to bless us, you
+              may do so through the QR codes below. Thank you for celebrating
+              with us!
+            </p>
+
+            <div className="flex justify-center gap-2 mt-4">
+              <QrCode img={GCash1} alt="GCash QR Code" title="GCash" />
+              <QrCode img={BPI} alt="BPI QR Code" title="BPI" />
+              <QrCode img={GCash} alt="GCash QR Code" title="GCash" />
+            </div>
+          </Card>
         </motion.div>
       </div>
     </motion.section>

@@ -1,6 +1,9 @@
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim"; // ✅ Use 'loadSlim' instead of 'loadFull'
+import { loadSlim } from "tsparticles-slim";
+// import White from "../../assets/img/white.png";
+import White1 from "../../assets/img/white1.png";
+import Leaf from "../../assets/img/leaf.png";
 
 const ParticlesBackground = () => {
   const particlesInit = useCallback(async (engine) => {
@@ -8,43 +11,37 @@ const ParticlesBackground = () => {
   }, []);
 
   const particlesOptions = {
-    fullScreen: { enable: false }, // Optional, keeps particles within section
+    fullScreen: { enable: false },
     particles: {
-      number: { value: 80 },
-      size: { value: 1 },
+      number: { value: 40, density: { enable: true, value_area: 800 } }, // More elements for a fuller effect
+      shape: {
+        type: "image",
+        image: [
+          // { src: White, width: 100, height: 100 }, // White flower
+          { src: White1, width: 80, height: 80 }, // Green leaf
+          { src: Leaf, width: 80, height: 80 }, // Green leaf
+        ],
+      },
+      size: { value: { min: 10, max: 25 }, random: true },
+      opacity: { value: 1 }, // No transparency
+      rotate: { animation: { enable: true, speed: 5 } }, // Slight rotation
       move: {
         enable: true,
-        speed: 2,
-        direction: "none",
+        speed: 1.2,
+        direction: "bottom",
         random: true,
         straight: false,
-        outModes: {
-          default: "out",
-        },
-      },
-      opacity: { value: 0.7 },
-      color: { value: "#84cc16" },
-      links: {
-        enable: true,
-        color: "#84cc16",
-        distance: 150,
-        width: 0.5,
+        outModes: { default: "out" },
       },
     },
     interactivity: {
       events: {
-        onHover: {
-          enable: true,
-          mode: "repulse", // Particles scatter away on hover
-        },
-        onClick: {
-          enable: true,
-          mode: "push", // Adds new particles on click
-        },
+        onHover: { enable: true, mode: "bubble" },
+        onClick: { enable: true, mode: "push" },
       },
       modes: {
-        repulse: { distance: 70 },
-        push: { quantity: 1 },
+        bubble: { size: 25, distance: 100 },
+        push: { quantity: 2 },
       },
     },
   };
@@ -54,7 +51,7 @@ const ParticlesBackground = () => {
       id="tsparticles"
       init={particlesInit}
       options={particlesOptions}
-      className="absolute inset-0 w-full h-full z-0"
+      className="absolute inset-0 w-full h-full z-0 mt-12"
     />
   );
 };
