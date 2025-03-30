@@ -38,6 +38,8 @@ function App() {
         >
           <Panels imagePath={Bride} />
         </motion.div>
+
+        <BackgroundAudio />
       </div>
     </>
   );
