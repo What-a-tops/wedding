@@ -1,2 +1,0 @@
-import{j as t}from"./index-jt5S0UDh.js";const i=({title:e,className:x=""})=>{const[s,l]=e.split(`
-`);return t.jsxs("h1",{className:`text-4xl sm:text-3xl md:text-4xl lg:text-5xl tracking-wide text-lime-900/80 text-center flex flex-col drop-shadow-md ${x}`,style:{fontFamily:"Coneria"},children:[t.jsx("span",{children:s}),t.jsx("span",{className:"block text-3xl sm:text-2xl md:text-3xl mt-1",children:l})]})};export{i as T};
