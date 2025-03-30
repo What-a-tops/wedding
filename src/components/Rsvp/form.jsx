@@ -12,6 +12,7 @@ const form = () => {
     guests: 1,
     status: "Present",
     message: "",
+    code: "",
   });
 
   const handleChange = (e) => {
@@ -23,6 +24,15 @@ const form = () => {
     e.preventDefault();
     setLoading(true);
     const googleScriptURL = import.meta.env.VITE_GOOGLE_WEB_APP_URL;
+    const weddingCode = import.meta.env.VITE_WEDDING_CODE;
+
+    if (formData.code !== weddingCode) {
+      toast.error(
+        "Invalid Wedding Code. Please try again or ask the couple for the code."
+      );
+      setLoading(false);
+      return;
+    }
 
     const payload = {
       name: formData.name,
@@ -53,6 +63,7 @@ const form = () => {
           guests: 1,
           status: "Present",
           message: "",
+          code: "",
         });
       } else if (result.error === "Guest has already submitted RSVP!") {
         toast.warning("You have already submitted your RSVP. Thank you!");
@@ -80,6 +91,7 @@ const form = () => {
           placeholder="Your Full Name"
           value={formData.name}
           onChange={handleChange}
+          disabled={loading}
           required
         />
         <Input
@@ -88,6 +100,7 @@ const form = () => {
           placeholder="Your Email Address"
           value={formData.email}
           onChange={handleChange}
+          disabled={loading}
           required
         />
         <Input
@@ -97,12 +110,14 @@ const form = () => {
           value={formData.guests}
           min="1"
           onChange={handleChange}
+          disabled={loading}
           required
         />
         <Select
           name="status"
           value={formData.status}
           onChange={handleChange}
+          disabled={loading}
           required
         >
           <option value="Present">Present</option>
@@ -113,8 +128,21 @@ const form = () => {
           placeholder="Any special requests or notes..."
           rows={4}
           value={formData.message}
+          disabled={loading}
           onChange={handleChange}
         />
+
+        <Input
+          type="text"
+          name="code"
+          placeholder="Wedding Code"
+          value={formData.code}
+          min="1"
+          onChange={handleChange}
+          disabled={loading}
+          required
+        />
+
         <Button
           type="submit"
           className="w-full bg-lime-700 text-white py-2 rounded-lg hover:bg-lime-900 transition flex items-center justify-center disabled:bg-gray-400"
