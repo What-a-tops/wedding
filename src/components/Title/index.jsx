@@ -5,11 +5,12 @@ const Title = ({ title, className = "" }) => {
 
   return (
     <h1
-      className={`text-2xl sm:text-xl md:text-2xl lg:text-4xl tracking-wide text-lime-900/80 text-center flex flex-col drop-shadow-md ${className}`}
+      className={`text-lg sm:text-base md:text-lg lg:text-2xl tracking-wide text-lime-900/80 text-center flex flex-col drop-shadow-md ${className}`}
       style={{ fontFamily: "Coneria" }}
     >
       <span>{firstLine}</span>
-      <span className="block text-xl sm:text-sm md:text-3xl lg:text-4xl mt-1">
+
+      <span className="block text-base sm:text-sm md:text-xl lg:text-2xl mt-1">
         {secondLine}
       </span>
     </h1>
