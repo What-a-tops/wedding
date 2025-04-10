@@ -50,7 +50,7 @@ const index = () => {
 
                   <p className="text-sm text-lime-700/80 leading-relaxed mb-2 flex items-center gap-1">
                     <MapIcon className="w-4 h-4 text-lime-900" />
-                    <strong>Address:</strong> Brgy. Amambucale, Marabut Samar
+                    <strong>Address:</strong> Brgy. Amambucale, Marabut, Samar
                   </p>
 
                   <p className="text-sm text-lime-700/80 leading-relaxed mb-2 flex items-center gap-1">
@@ -65,9 +65,9 @@ const index = () => {
 
                   <hr className="my-4 border-lime-900" />
 
-                  {/*<p className="text-xs text-lime-900 italic text-center">*/}
-                  {/*  "We can't wait to celebrate this special day with you!"*/}
-                  {/*</p>*/}
+                  <p className="text-xs text-lime-900 italic text-center">
+                    "We can't wait to celebrate this special day with you!"
+                  </p>
                 </div>
               </div>
 
