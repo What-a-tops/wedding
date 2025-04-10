@@ -38,8 +38,8 @@ const index = () => {
           <SemiTitle value="Bridesmaids" />
           <Semi value="ms. jemarlyn r. barabad" />
           <Semi value="mrs. loury jane b. caÑon" />
-          <Semi value="ms. erecca mae. m. grego" />
           <Semi value="ms. nikki q. orella" />
+          <Semi value="ms. erecca mae. m. grego" />
           <Semi value="ms. rosaleah t. dalina" />
         </div>
       </div>
