@@ -1,11 +1,22 @@
 import { useEffect, useRef, useState } from "react";
-import Song1 from "../../assets/playlists/Sezairi-Its-You.mp3";
-import Song2 from "../../assets/playlists/Nothing_Gonna_Change_My_Love_For_You.mp3";
-import Song3 from "../../assets/playlists/Until_i_found_you.mp3";
+
+import Song1 from "../../assets/playlists/Touch_the_sky.mp3";
+import Song2 from "../../assets/playlists/He_Knows.mp3";
+import Song3 from "../../assets/playlists/The_blessing.mp3";
+import Song4 from "../../assets/playlists/Sezairi-Its-You.mp3";
+import Song5 from "../../assets/playlists/Nothing_Gonna_Change_My_Love_For_You.mp3";
+import Song6 from "../../assets/playlists/This_is_the_day.mp3";
 
 const BackgroundAudio = () => {
   const audioRef = useRef(null);
-  const [playlist, setPlaylist] = useState([Song1, Song2, Song3]);
+  const [playlist, setPlaylist] = useState([
+    Song1,
+    Song2,
+    Song3,
+    Song4,
+    Song5,
+    Song6,
+  ]);
   const [currentTrack, setCurrentTrack] = useState(0);
 
   useEffect(() => {

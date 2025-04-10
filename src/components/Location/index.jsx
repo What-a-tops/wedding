@@ -65,9 +65,9 @@ const index = () => {
 
                   <hr className="my-4 border-lime-900" />
 
-                  <p className="text-xs text-lime-900 italic text-center">
-                    "We can't wait to celebrate this special day with you!"
-                  </p>
+                  {/*<p className="text-xs text-lime-900 italic text-center">*/}
+                  {/*  "We can't wait to celebrate this special day with you!"*/}
+                  {/*</p>*/}
                 </div>
               </div>
 

@@ -9,7 +9,7 @@ const index = () => {
     <div className="grid grid-cols-1 gap-6">
       <div className="text-center">
         <SemiHeader value="Officiating Minister" />
-        <Semi value="Rev. Javyee M. Tolibas" />
+        <Semi value="Rev. Jayvee M. Tolibas" />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center text-xs sm:text-sm md:text-base">
@@ -42,7 +42,7 @@ const index = () => {
           <Semi value="MR. ROBERT FERMIN" />
         </div>
         <div>
-          <Semi value="PTR. JAVYEE M. TOLIBAS" />
+          <Semi value="REV. JAYVEE M. TOLIBAS" />
           <Semi value="MRS. NANCYLEL T. TABUAC" />
           <Semi value="MRS. LEA C. DACUT" />
           <Semi value="MRS. LILY MAE G. QUILBIO" />

@@ -1,9 +1,8 @@
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
-// import White from "../../assets/img/white.png";
-import White1 from "../../assets/img/white1.png";
-import Leaf from "../../assets/img/leaf.png";
+import White from "@/assets/img/white.png";
+import Leaf from "@/assets/img/leaf.png";
 
 const ParticlesBackground = () => {
   const particlesInit = useCallback(async (engine) => {
@@ -13,18 +12,17 @@ const ParticlesBackground = () => {
   const particlesOptions = {
     fullScreen: { enable: false },
     particles: {
-      number: { value: 40, density: { enable: true, value_area: 800 } }, // More elements for a fuller effect
+      number: { value: 40, density: { enable: true, value_area: 800 } },
       shape: {
         type: "image",
         image: [
-          // { src: White, width: 100, height: 100 }, // White flower
-          { src: White1, width: 80, height: 80 }, // Green leaf
-          { src: Leaf, width: 80, height: 80 }, // Green leaf
+          { src: White, width: 80, height: 80 },
+          { src: Leaf, width: 80, height: 80 },
         ],
       },
       size: { value: { min: 10, max: 25 }, random: true },
       opacity: { value: 1 }, // No transparency
-      rotate: { animation: { enable: true, speed: 5 } }, // Slight rotation
+      rotate: { animation: { enable: true, speed: 5 } },
       move: {
         enable: true,
         speed: 1.2,

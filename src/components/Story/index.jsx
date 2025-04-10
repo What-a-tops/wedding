@@ -20,7 +20,7 @@ const Index = () => {
       transition={{ duration: 1.5, ease: "easeOut" }}
     >
       <motion.div
-        className="flex flex-col justify-center items-center p-4 md:p-8 rounded-2xl w-full text-center gap-6 border-0 border-lime-600/50 border-opacity-20 overflow-hidden max-w-[95%] md:max-w-xl bg-white/80 backdrop-blur-sm shadow-lg"
+        className="flex flex-col justify-center items-center p-4 md:p-8 rounded-2xl w-full text-center gap-6 border-0 border-lime-600/50 border-opacity-20 overflow-hidden max-w-[95%] bg-white/80 backdrop-blur-sm shadow-lg"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false }}
@@ -50,19 +50,43 @@ const Index = () => {
           viewport={{ once: false }}
           transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
         >
-          <p className="text-justify text-lime-900/80 text-opacity-90 leading-relaxed text-sm md:text-base mt-2 mb-2">
-            Our journey began with a simple message — a text that led to hours
-            of heartfelt chats. What started as casual conversations in a church
-            group blossomed into something extraordinary. Despite the miles
-            between us, our connection only grew stronger. Through every video
-            call, prayer, and shared moment, our love deepened.
-          </p>
+          <>
+            <h4 className="text-lime-900/90 text-lg md:text-xl font-semibold mb-4 text-center">
+              A Journey of Faith, Friendship, and Forever
+            </h4>
+            <p className="text-justify text-lime-900/80 text-opacity-90 leading-relaxed text-sm md:text-base mt-2 mb-2">
+              Our love story is one written by faith—a gentle journey that began
+              with quiet smiles and unexpected conversations in the heart of our
+              church. What started as chance encounters soon blossomed into a
+              deep and genuine friendship, nurtured by shared prayers, laughter,
+              and meaningful moments spent serving together.
+            </p>
 
-          <p className="text-justify text-lime-900/80 text-opacity-90 leading-relaxed text-sm md:text-base mt-2 mb-2">
-            On April 28, 2025, we stand together, ready to celebrate this
-            beautiful journey with you. We can't wait to share this special day
-            with our cherished family and friends!
-          </p>
+            <p className="text-justify text-lime-900/80 text-opacity-90 leading-relaxed text-sm md:text-base mt-2 mb-2">
+              As we grew closer through church activities, our bond deepened—not
+              only between us but with the dear friends who walked alongside us.
+              Through it all, we were guided by our trust in God's perfect plan,
+              choosing to wait patiently for His timing, with hearts full of
+              hope. Though time and distance stretched our journey, they never
+              weakened our love. Prayer became our anchor, faith our foundation,
+              and patience our quiet strength. And in every season, God was
+              faithful.
+            </p>
+
+            <p className="text-justify text-lime-900/80 text-opacity-90 leading-relaxed text-sm md:text-base mt-2 mb-2">
+              Now, with overflowing joy and gratitude, we look forward to a day
+              we’ve long prayed for—the day we say “yes” to forever. On{" "}
+              <strong>April 28, 2025</strong>, we will celebrate the union of
+              our hearts and the love that has brought us to this beautiful
+              moment.
+            </p>
+
+            <p className="text-justify text-lime-900/80 text-opacity-90 leading-relaxed text-sm md:text-base mt-2 mb-2">
+              We can’t wait to share this joyous chapter with our cherished
+              family and friends—each of you a part of our journey, each of you
+              a blessing in our story.
+            </p>
+          </>
 
           <motion.div
             className="text-center text-lime-900/80 italic text-sm md:text-md font-serif mt-4"

@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import Section from "../Section";
-import Intro from "../../assets/img/intro.mp4";
+import Intro from "@/assets/img/intro.mp4";
 import { Maximize, Minimize } from "lucide-react";
 import ParticlesBackground from "../Particle";
 

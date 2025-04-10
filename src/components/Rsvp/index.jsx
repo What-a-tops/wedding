@@ -107,9 +107,10 @@ function index() {
             </h5>
 
             <p className="text-xs xs:text-base text-lime-700/80 italic text-center mt-2 px-4">
-              our presence is our greatest gift. If you'd like to bless us, you
-              may do so through the QR codes below. Thank you for celebrating
-              with us!
+              Your presence and prayers are the greatest gifts we could ask for.
+              Should you wish to bless us further, we kindly suggest a monetary
+              gift, which can be given using the QR codes below. Thank you for
+              celebrating with us!
             </p>
 
             <div className="flex justify-center gap-2 mt-4">

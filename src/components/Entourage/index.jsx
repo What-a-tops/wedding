@@ -1,6 +1,6 @@
 import React from "react";
-import Events from "../../assets/img/events.jpg";
-import Entourage from "../../assets/img/entourage.png";
+import Events from "@/assets/img/events.jpg";
+import Entourage from "@/assets/img/entourage.png";
 import { motion } from "framer-motion";
 import Title from "../Title";
 import Left from "./Right";
