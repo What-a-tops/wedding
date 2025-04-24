@@ -1,2 +1,2 @@
-import{j as t}from"./index-BYRZ7d5Z.js";const i=({title:e,className:s=""})=>{const[l,x]=e.split(`
+import{j as t}from"./index-xPJWWW8f.js";const i=({title:e,className:s=""})=>{const[l,x]=e.split(`
 `);return t.jsxs("h1",{className:`text-lg sm:text-base md:text-lg lg:text-2xl tracking-wide text-lime-900/80 text-center flex flex-col drop-shadow-md ${s}`,style:{fontFamily:"Coneria"},children:[t.jsx("span",{children:l}),t.jsx("span",{className:"block text-base sm:text-sm md:text-xl lg:text-2xl mt-1",children:x})]})};export{i as T};
