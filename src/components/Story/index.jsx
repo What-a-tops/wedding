@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import Title from "../Title/index.jsx";
-import StoryBg from "../../assets/img/story.jpg";
+import StoryBg from "../../assets/img/story.webp";
 import Ring from "../../assets/img/wedring.svg";
 
 const Index = () => {

@@ -5,7 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Attire from "../../assets/img/attire.png";
 import Color from "../../assets/img/color.png";
 import Title from "../Title";
-import Bouquet from "../../assets/img/bouquet.jpg";
+import Bouquet from "../../assets/img/bouquet.webp";
 import QrCode from "../QRCode/image";
 
 import GCash1 from "../../assets/qrcode/gcash1.png";

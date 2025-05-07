@@ -6,7 +6,7 @@ import { MapPin, TimerIcon } from "lucide-react";
 import { CalendarIcon, MapIcon } from "@heroicons/react/16/solid";
 import Title from "../Title";
 import { motion } from "framer-motion";
-import Ring from "../../assets/img/ring.jpg";
+import Ring from "../../assets/img/ring.webp";
 
 const index = () => {
   return (
